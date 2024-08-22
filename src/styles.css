@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
-h1 {
+.title {
     text-align: center;
     font-family: "Matemasie", sans-serif;
     font-weight: 400;
@@ -11,7 +11,7 @@ h1 {
     margin: 1rem 0;
 }
 
-h1::selection {
+.title::selection {
     color: red;
     background: none;
 }
@@ -29,6 +29,7 @@ form {
     width: 70%;
     border-radius: 30px;
     font-family: "Roboto", sans-serif;
+    box-shadow: rgb(155, 89, 182) 10px 10px 10px;
 }
 
 .passwordResultContainer {
@@ -39,11 +40,12 @@ form {
     background-color: #002557;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    /* border: solid 1px green; */
 }
 
 #generatedPassword {
     color: white;
-    width: 90%;
+    width: 85%;
     font-size: 1.2rem;
     white-space: nowrap;
     overflow: hidden;
@@ -52,6 +54,7 @@ form {
     padding-bottom: 1.2rem;
     padding-left: 1rem;
     min-height: 25px;
+    /* border: solid 1px violet; */
 }
 
 #generatedPassword::selection {
@@ -59,20 +62,31 @@ form {
     background: none;
 }
 
-.copyPasswordBtn {
-    width: 10%;
+.passwordResultContainer .btnsContainer {
+    width: 15%;
+    display: flex;
+}
+
+.passwordResultContainer button {
+    width: 100%;
     cursor: pointer;
     background-color: #3B3B98;
     border: none;
     color: #fff;
     font-size: 40px;
     padding: 0 !important;
-    border-top-right-radius: 30px;
+}
+
+.passwordResultContainer button:first-child {
     border-bottom-left-radius: 30px;
 }
 
-.copyPasswordBtn:hover {
-    opacity: 0.9;
+.passwordResultContainer button:nth-child(2) {
+    border-top-right-radius: 30px;
+}
+
+.passwordResultContainer button:hover {
+    opacity: 0.8;
 }
 
 .passLengthContainer {
@@ -97,7 +111,7 @@ form {
     border-radius: 30px;
     padding: 0.3rem 3.5rem;
     background-color: #3B3B98;
-    width: 20rem;
+    max-width: 20rem;
 }
 
 .checkboxesContainer {
@@ -151,7 +165,7 @@ form {
 
 .formBtn {
     font-size: 2rem;
-    padding: 0.5rem 4rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 30px;
     background-color: #3B3B98;
     border: none;
@@ -159,8 +173,8 @@ form {
 }
 
 .formBtn:hover {
-    cursor: pointer;
     opacity: 0.9;
+    cursor: pointer;
 }
 
 .alertContainer {

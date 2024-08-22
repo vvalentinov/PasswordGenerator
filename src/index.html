@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./styles.css">
     <title>Password Generator</title>
 </head>
@@ -14,32 +14,30 @@
 <body>
 
     <main>
-        <h1 class="animate__animated animate__bounceInDown">Password Generator</h1>
+        <h1 class="title animate__animated animate__bounceInDown">
+            Password Generator
+        </h1>
 
         <section class="formSection">
             <form>
-
                 <div class="passwordResultContainer">
                     <span id="generatedPassword"></span>
-                    <button type="button" class="copyPasswordBtn" title="Copy to Clipboard">
-                        <i class="far fa-clipboard"></i>
-                    </button>
+                    <div class="btnsContainer">
+                        <button type="button" class="copyPasswordBtn" title="Copy to Clipboard">
+                            <i class="far fa-clipboard"></i>
+                        </button>
+                        <button type="button" class="downloadPasswordBtn" title="Download password">
+                            <i class="fa-solid fa-download"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="passLengthContainer">
                     <span class="passLength">Password Length: <span id="passLengthValue">50</span></span>
-                    <input
-                        min="10"
-                        max="100"
-                        value="50"
-                        type="range"
-                        id="passLengthRange"
-                        name="passLengthRange"
-                    />
+                    <input min="10" max="100" value="50" type="range" id="passLengthRange" name="passLengthRange" />
                 </div>
 
                 <div class="checkboxesContainer">
-
                     <div class="checkboxContainer">
                         <input type="checkbox" id="numbers" name="numbers" value="Numbers" checked>
                         <label for="numbers">Include numbers</label><br>
@@ -67,16 +65,12 @@
                         <i class="fa-solid fa-gears"></i>
                     </button>
                 </div>
-
             </form>
         </section>
     </main>
 
     <script type="module" src="./js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </body>
-
-
 
 </html>
