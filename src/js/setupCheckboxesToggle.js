@@ -1,4 +1,4 @@
-export function checkboxToggle() {
+export function setupCheckboxToggle() {
     const checkboxesContainers = document.querySelectorAll('.checkboxContainer');
 
     checkboxesContainers.forEach(container => {

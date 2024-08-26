@@ -1,7 +1,7 @@
 import { fireErr, fireSuccess } from "./alertUtil.js";
 import { emptyPassWhenCopyErr, copyPassSuccss } from "./constants.js";
 
-export function copyPassword() {
+export function setupCopyPassword() {
     const copyPassBtn = document.querySelector('.copyPasswordBtn');
 
     copyPassBtn.addEventListener('click', () => {

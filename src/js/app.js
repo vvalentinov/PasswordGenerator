@@ -1,11 +1,11 @@
-import { sliderChange } from "./sliderChange.js";
-import { copyPassword } from './copyPassword.js';
-import { checkboxToggle } from './checkboxesToggle.js';
-import { downloadPassword } from './downloadPassword.js';
-import { generatePassword } from "./generatePassword.js";
+import { setupSliderChange } from "./setupSliderChange.js";
+import { setupCopyPassword } from './setupCopyPassword.js';
+import { setupCheckboxToggle } from './setupCheckboxesToggle.js';
+import { setupDownloadPassword } from './setupDownloadPassword.js';
+import { setupGeneratePassword } from "./setupGeneratePassword.js";
 
-sliderChange();
-checkboxToggle();
-copyPassword();
-downloadPassword();
-generatePassword();
+setupSliderChange();
+setupCheckboxToggle();
+setupCopyPassword();
+setupDownloadPassword();
+setupGeneratePassword();

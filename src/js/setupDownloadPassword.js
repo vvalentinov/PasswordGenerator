@@ -1,7 +1,7 @@
 import { fireErr } from "./alertUtil.js";
 import { emptyPassWhenDownloadErr } from "./constants.js";
 
-export function downloadPassword() {
+export function setupDownloadPassword() {
     const downloadPassBtn = document.querySelector('.downloadPasswordBtn');
 
     downloadPassBtn.addEventListener('click', () => {

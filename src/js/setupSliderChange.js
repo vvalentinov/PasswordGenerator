@@ -1,4 +1,4 @@
-export function sliderChange() {
+export function setupSliderChange() {
     const slider = document.getElementById('passLengthRange');
     const passLengthSpan = document.getElementById('passLengthValue');
 
@@ -8,6 +8,7 @@ export function sliderChange() {
         e.preventDefault();
 
         const step = 1;
+
         const currentValue = Number(slider.value);
 
         slider.value = e.deltaY < 0 ?
