@@ -40,7 +40,6 @@ form {
     background-color: #002557;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    /* border: solid 1px green; */
 }
 
 #generatedPassword {
@@ -54,7 +53,6 @@ form {
     padding-bottom: 1.2rem;
     padding-left: 1rem;
     min-height: 25px;
-    /* border: solid 1px violet; */
 }
 
 #generatedPassword::selection {
@@ -108,10 +106,10 @@ form {
 .passLength {
     color: white;
     font-size: 2rem;
+    max-width: 20rem;
     border-radius: 30px;
     padding: 0.3rem 3.5rem;
     background-color: #3B3B98;
-    max-width: 20rem;
 }
 
 .checkboxesContainer {
@@ -144,6 +142,12 @@ form {
     accent-color: #9b59b6;
 }
 
+.checkboxContainer label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .checkboxContainer:hover {
     opacity: 0.9;
 }
@@ -156,7 +160,7 @@ form {
 
 .formBtnContainer {
     background-color: #002557;
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem;
     display: flex;
     justify-content: center;
     border-bottom-left-radius: 30px;
@@ -179,4 +183,37 @@ form {
 
 .alertContainer {
     font-family: "Roboto", sans-serif;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #generatedPassword {
+        width: 70%;
+    }
+
+    .passwordResultContainer .btnsContainer {
+        width: 30%;
+    }
+
+    .formBtn {
+        font-size: 1.3rem;
+    }
+
+    .passLength {
+        font-size: 1.2rem;
+    }
+
+    .passLengthContainer {
+        padding: 0.5rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #generatedPassword {
+        width: 60%;
+    }
+
+    .passwordResultContainer .btnsContainer {
+        width: 40%;
+    }
 }

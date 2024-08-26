@@ -33,23 +33,12 @@ export function setupGeneratePassword() {
             return;
         }
 
-        const randomFunc = {};
-
-        if (includesLowercase) {
-            randomFunc.lower = () => String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-        }
-
-        if (includesUppercase) {
-            randomFunc.upper = () => String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-        }
-
-        if (includesNumbers) {
-            randomFunc.number = () => Number(String.fromCharCode(Math.floor(Math.random() * 10) + 48));
-        }
-
-        if (includesSpecial) {
-            randomFunc.symbol = () => specialSymbols[Math.floor(Math.random() * specialSymbols.length)];
-        }
+        const randomFunc = {
+            ...(includesLowercase && { lower: () => String.fromCharCode(Math.floor(Math.random() * 26) + 97) }),
+            ...(includesUppercase && { upper: () => String.fromCharCode(Math.floor(Math.random() * 26) + 65) }),
+            ...(includesNumbers && { number: () => Number(String.fromCharCode(Math.floor(Math.random() * 10) + 48)) }),
+            ...(includesSpecial && { symbol: () => specialSymbols[Math.floor(Math.random() * specialSymbols.length)] }),
+        };
 
         const keys = Object.keys(randomFunc);
 
